@@ -1,0 +1,44 @@
+# pyproject.toml
+
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "manjevas-six502"
+version = "0.1.0"
+description = "Emulate MOS 6502 CPU with 8k memory"
+readme = "README.md"
+authors = [{ name = "Manjunath Srinivasa", email = "manjevas@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: Apache License :: Version 2",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["emulator", "MOS", "6502"]
+dependencies = [
+    'tomli; python_version < "3.11"',
+]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["bumpver", "pip-tools", "pytest"]
+
+[project.urls]
+Homepage = "https://github.com/manjevas/manjevas-six502"
+
+[project.scripts]
+emulate_six502 = "six502.__main__:main"
+
+[tool.bumpver]
+current_version = "0.1.0"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message  = "Bump version {old_version} -> {new_version}"
+commit          = true
+tag             = true
+push            = false
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = ['current_version = "{version}"', 'version = "{version}"']
+"src/six502/__init__.py" = ["{version}"]
