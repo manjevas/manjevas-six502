@@ -13,3 +13,25 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+import six502
+
+class clock:
+    def __init__(self):
+        self.counter = 0x0
+        self.time = 0.0
+        self.speed = six502.CLOCK
+
+    def __get__(self, instance, owner):
+        return self.value
+
+    def reset(self):
+        self.counter = 0x0
+        self.time = 0.0
+
+    def tick(self, count=1):
+        if count < 0:
+            raise Exception(f"{str(count)} is non-negative")
+        self.counter += count
+        self.time += count * 1 / self.speed
+        
