@@ -14,6 +14,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from six502.addressing import addressing
+from six502.bus import bus
+from six502.clock import clock
+from six502.cpu import cpu
+from six502.emulate import emulate
+from six502.instructions import instructions
+from six502.keyboard import keyboard
+from six502.memory import memory
+from six502.monitor import monitor
+from six502.register import register
+
 from importlib import resources
 
 try:
