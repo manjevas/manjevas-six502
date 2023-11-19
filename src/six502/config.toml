@@ -2,7 +2,7 @@
 
 [configuration]
 ram_size        = 8192
-clock           = 1000.0
+clock           = 102300000.0 # Setting to 102.3 MHz, 10x slower than Apple I
 run_mode        = "stepped"
 monitor_size_x  = 40
 monitor_size_y  = 20

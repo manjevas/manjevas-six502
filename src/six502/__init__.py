@@ -17,6 +17,7 @@
 from importlib import resources
 
 from six502.bus_ import bus
+from six502.clock_ import clock
 
 try:
     import tomllib

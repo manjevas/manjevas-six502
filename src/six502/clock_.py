@@ -15,6 +15,7 @@
 # limitations under the License.
 
 import six502
+import ctypes
 
 class clock:
     def __init__(self):
@@ -30,8 +31,22 @@ class clock:
         self.time = 0.0
 
     def tick(self, count=1):
+        def delay_execution(nanoseconds):
+            # Load the ntdll DLL
+            ntdll = ctypes.windll.ntdll
+
+            # Define the argument types and return type
+            ntdll.NtDelayExecution.argtypes = [ctypes.c_byte, ctypes.POINTER(ctypes.c_longlong)]
+            ntdll.NtDelayExecution.restype = ctypes.c_long
+
+            # The delay must be negative to represent a relative delay.
+            delay = -int(nanoseconds / 100)  # Convert to 100-nanosecond intervals
+            ntdll.NtDelayExecution(False, ctypes.byref(ctypes.c_longlong(delay)))
+
         if count < 0:
             raise Exception(f"{str(count)} is non-negative")
+        
         self.counter += count
         self.time += count * 1 / self.speed
+        delay_execution(self.time * 10 ** 9)
         
