@@ -54,6 +54,7 @@ coverage.xml
 .pytest_cache/
 cover/
 test_save.bin
+test_tapeOut.bin
 
 # Translations
 *.mo

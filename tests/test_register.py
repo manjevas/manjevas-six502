@@ -1,4 +1,4 @@
-# test_registers.py
+# test_register.py
 
 # Copyright [2023] Manjunath Srinivasa
 
@@ -17,7 +17,7 @@
 import unittest
 import sys
 sys.path.append('../src')
-from six502 import register
+from six502.register_ import register
 
 class TestRegister(unittest.TestCase):
 

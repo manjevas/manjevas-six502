@@ -17,7 +17,7 @@
 import unittest
 import sys
 sys.path.append('../src')
-from six502 import memory
+from six502.memory_ import memory
 
 class TestMemory(unittest.TestCase):
 
@@ -25,10 +25,10 @@ class TestMemory(unittest.TestCase):
         mem = memory()
         self.assertEqual(mem.size, 8192)
 
-    def test_read_write(self):
+    def test_get_set(self):
         mem = memory()
-        mem.write(0x00F1, 0xFA)
-        self.assertEqual(mem.read(0x00F1), 0xFA)
+        mem.set(0xFA, 0x00F1)
+        self.assertEqual(mem.get(0x00F1), 0xFA)
 
     def test_load(self):
         mem = memory()
@@ -36,18 +36,18 @@ class TestMemory(unittest.TestCase):
 
         count = 0
         for i in range(0, mem.size):
-            if mem.read(i) != 0:
+            if mem.get(i) != 0:
                 count += 1
 
         self.assertEqual(count, 0xF)
 
     def test_save(self):
         mem = memory()        
-        mem.write(0x00F1, 0xFA)
+        mem.set(0xFA, 0x00F1)
         mem.save("test_save")
         mem.reset()
 
-        self.assertEqual(mem.read(0x00F1), 0xFA)
+        self.assertEqual(mem.get(0x00F1), 0xFA)
 
 if __name__ == '__main__':
     unittest.main()
