@@ -14,13 +14,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import six502
-import warnings        
+import warnings     
 
 class memory:
     
-    def __init__(self):
-        self.__dat = [0] * six502.MEM_SIZE
+    def __init__(self, size = 8192):
+        self.__dat = [0] * size
         self.size = len(self.__dat)
 
     def load(self, file):
@@ -39,20 +38,21 @@ class memory:
             for hex_num in self.__dat:
                 f.write(hex_num.to_bytes(1, "big"))
 
-    def reset(self):
-        self.__dat = [0] * six502.MEM_SIZE
+    def reset(self, trueZero=False):
+        self.__dat = [0] * self.size
         try:
-            self.load(self.__tape)
+            if not(trueZero):
+                self.load(self.__tape)
         except:
-            warnings.warn("No tape found, loading zeros.", Warning)
+            warnings.warn("No tape found, loading zeros.", UserWarning)
 
-    def read(self, addr):
+    def get(self, addr):
         try:
             return self.__dat[addr]
         except:
             Exception("Memory address outside bounds.")
 
-    def write(self, addr, val):
+    def set(self, val, addr):
         if addr <= 0xFFFF:
             self.__dat[addr] = val
         else:

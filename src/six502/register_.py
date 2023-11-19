@@ -45,6 +45,9 @@ class register:
         self.__dat = 0
         self.size = size
 
+    def reset(self):
+        self.__dat = 0
+
     def get_bit(self, bit):
         if bit < self.size:
             return self.__get_nth_bit(self.__dat, bit)

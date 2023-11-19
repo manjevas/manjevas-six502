@@ -1,12 +1,12 @@
 # config.toml
 
 [configuration]
-mem_size        = 8192
+ram_size        = 8192
 clock           = 1000.0
-run+mode        = "stepped"
+run_mode        = "stepped"
 monitor_size_x  = 40
 monitor_size_y  = 20
-logging         = True
+logging         = 1
 
 [initialization]
 status_reg      = 0b00100000
