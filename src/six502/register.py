@@ -60,10 +60,10 @@ class register:
         else:
             raise Exception(f"{str(val)} is not an acceptable bit")
 
-    def get(self):
+    def get(self, *argv):
         return self.__dat
     
-    def set(self, val):
+    def set(self, val, *argv):
         if(val >= 2**self.size):
             raise Exception(f"{str(val)} is greater than max value of register")
         else:

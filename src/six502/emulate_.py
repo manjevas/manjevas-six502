@@ -13,3 +13,28 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+from six502 import clock
+from six502 import memory
+from six502 import bus
+from six502 import cpu
+from six502 import monitor
+from six502 import keyboard
+
+class emulate:
+    def __init__(self):
+        self.cpu = cpu
+        self.memory = memory
+        self.bus = bus
+        self.monitor = monitor
+        self.clock = clock
+        self.keyboard = keyboard
+
+    def reset(self):
+        self.cpu.reset()
+        self.memory.reset()
+        self.monitor.reset()
+        self.clock.reset()
+
+    def run():
+        pass
