@@ -1,0 +1,1766 @@
+{
+    "00": {
+      "instruction": "BRK",
+      "addressing": "imp",
+      "bytes": 1,
+      "cycles": 7,
+      "flags": "B"
+    },
+    "01": {
+      "instruction": "ORA",
+      "addressing": "ind,X",
+      "bytes": 2,
+      "cycles": 6,
+      "flags": "NZ"
+    },
+    "02": {
+      "instruction": "JAM",
+      "addressing": "imp",
+      "bytes": 1,
+      "cycles": 0,
+      "flags": ""
+    },
+    "03": {
+      "instruction": "SLO",
+      "addressing": "ind,X",
+      "bytes": 2,
+      "cycles": 8,
+      "flags": "NZC"
+    },
+    "04": {
+      "instruction": "NOP",
+      "addressing": "zpg",
+      "bytes": 2,
+      "cycles": 3,
+      "flags": ""
+    },
+    "05": {
+        "instruction": "ORA",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": "NZ"
+      },
+      "06": {
+        "instruction": "ASL",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZC"
+      },
+      "07": {
+        "instruction": "SLO",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZC"
+      },
+      "08": {
+        "instruction": "PHP",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 3,
+        "flags": ""
+      },
+      "09": {
+        "instruction": "ORA",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": "NZ"
+      },
+      "0A": {
+        "instruction": "ASL",
+        "addressing": "A",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "NZC"
+      },
+      "0B": {
+        "instruction": "ANC",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": "NZC"
+      },
+      "10": {
+        "instruction": "BPL",
+        "addressing": "rel",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": ""
+      },
+      "11": {
+        "instruction": "ORA",
+        "addressing": "ind,Y",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZ"
+      },
+      "12": {
+        "instruction": "JAM",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 0,
+        "flags": ""
+      },
+      "13": {
+        "instruction": "SLO",
+        "addressing": "ind,Y",
+        "bytes": 2,
+        "cycles": 8,
+        "flags": "NZC"
+      },
+      "14": {
+        "instruction": "NOP",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 4,
+        "flags": ""
+      },
+      "15": {
+        "instruction": "ORA",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "16": {
+        "instruction": "ASL",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": "NZC"
+      },
+      "17": {
+        "instruction": "SLO",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": "NZC"
+      },
+      "18": {
+        "instruction": "CLC",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "C"
+      },
+      "19": {
+        "instruction": "ORA",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "1A": {
+        "instruction": "NOP",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": ""
+      },
+      "1B": {
+        "instruction": "SLO",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 7,
+        "flags": "NZC"
+      },
+      "1C": {
+        "instruction": "NOP",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": ""
+      },
+      "1D": {
+        "instruction": "ORA",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "1E": {
+        "instruction": "ASL",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 7,
+        "flags": "NZC"
+      },
+      "1F": {
+        "instruction": "SLO",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 7,
+        "flags": "NZC"
+      },
+      "20": {
+        "instruction": "JSR",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 6,
+        "flags": ""
+      },
+      "21": {
+        "instruction": "AND",
+        "addressing": "ind,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": "NZ"
+      },
+      "22": {
+        "instruction": "JAM",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 0,
+        "flags": ""
+      },
+      "23": {
+        "instruction": "RLA",
+        "addressing": "ind,X",
+        "bytes": 2,
+        "cycles": 8,
+        "flags": "NZC"
+      },
+      "24": {
+        "instruction": "BIT",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": "NZV"
+      },
+      "25": {
+        "instruction": "AND",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": "NZ"
+      },
+      "26": {
+        "instruction": "ROL",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZC"
+      },
+      "27": {
+        "instruction": "RLA",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZC"
+      },
+      "28": {
+        "instruction": "PLP",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 4,
+        "flags": "NZCIDBV"
+      },
+      "29": {
+        "instruction": "AND",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": "NZ"
+      },
+      "2A": {
+        "instruction": "ROL",
+        "addressing": "A",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "NZC"
+      },
+      "2B": {
+        "instruction": "ANC",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": "NZC"
+      },
+      "2C": {
+        "instruction": "BIT",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZV"
+      },
+      "2D": {
+        "instruction": "AND",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "2E": {
+        "instruction": "ROL",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 6,
+        "flags": "NZC"
+      },
+      "2F": {
+        "instruction": "RLA",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 6,
+        "flags": "NZC"
+      },
+      "30": {
+        "instruction": "BMI",
+        "addressing": "rel",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": ""
+      },
+      "31": {
+        "instruction": "AND",
+        "addressing": "ind,Y",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZ"
+      },
+      "32": {
+        "instruction": "JAM",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 0,
+        "flags": ""
+      },
+      "33": {
+        "instruction": "RLA",
+        "addressing": "ind,Y",
+        "bytes": 2,
+        "cycles": 8,
+        "flags": "NZC"
+      },
+      "34": {
+        "instruction": "NOP",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 4,
+        "flags": ""
+      },
+      "35": {
+        "instruction": "AND",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "36": {
+        "instruction": "ROL",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": "NZC"
+      },
+      "37": {
+        "instruction": "RLA",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": "NZC"
+      },
+      "38": {
+        "instruction": "SEC",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "C"
+      },
+      "39": {
+        "instruction": "AND",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "3A": {
+        "instruction": "NOP",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": ""
+      },
+      "3B": {
+        "instruction": "RLA",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 7,
+        "flags": "NZC"
+      },
+      "3C": {
+        "instruction": "NOP",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": ""
+      },
+      "3D": {
+        "instruction": "AND",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "3E": {
+        "instruction": "ROL",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 7,
+        "flags": "NZC"
+      },
+      "3F": {
+        "instruction": "RLA",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 7,
+        "flags": "NZC"
+      },
+      "40": {
+        "instruction": "RTI",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 6,
+        "flags": "NZCIDBV"
+      },
+      "41": {
+        "instruction": "EOR",
+        "addressing": "ind,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": "NZ"
+      },
+      "42": {
+        "instruction": "JAM",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 0,
+        "flags": ""
+      },
+      "43": {
+        "instruction": "SRE",
+        "addressing": "ind,X",
+        "bytes": 2,
+        "cycles": 8,
+        "flags": "NZC"
+      },
+      "44": {
+        "instruction": "NOP",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": ""
+      },
+      "45": {
+        "instruction": "EOR",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": "NZ"
+      },
+      "46": {
+        "instruction": "LSR",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZC"
+      },
+      "47": {
+        "instruction": "SRE",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZC"
+      },
+      "48": {
+        "instruction": "PHA",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 3,
+        "flags": ""
+      },
+      "49": {
+        "instruction": "EOR",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": "NZ"
+      },
+      "4A": {
+        "instruction": "LSR",
+        "addressing": "A",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "NZC"
+      },
+      "4B": {
+        "instruction": "ALR",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": "NZC"
+      },
+      "4C": {
+        "instruction": "JMP",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 3,
+        "flags": ""
+      },
+      "4D": {
+        "instruction": "EOR",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "4E": {
+        "instruction": "LSR",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 6,
+        "flags": "NZC"
+      },
+      "4F": {
+        "instruction": "SRE",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 6,
+        "flags": "NZC"
+      },"50": {
+        "instruction": "BVC",
+        "addressing": "rel",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": ""
+      },
+      "51": {
+        "instruction": "EOR",
+        "addressing": "ind,Y",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZ"
+      },
+      "52": {
+        "instruction": "JAM",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 0,
+        "flags": ""
+      },
+      "53": {
+        "instruction": "SRE",
+        "addressing": "ind,Y",
+        "bytes": 2,
+        "cycles": 8,
+        "flags": "NZC"
+      },
+      "54": {
+        "instruction": "NOP",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 4,
+        "flags": ""
+      },
+      "55": {
+        "instruction": "EOR",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "56": {
+        "instruction": "LSR",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": "NZC"
+      },
+      "57": {
+        "instruction": "SRE",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": "NZC"
+      },
+      "58": {
+        "instruction": "CLI",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "I"
+      },
+      "59": {
+        "instruction": "EOR",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "5A": {
+        "instruction": "NOP",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": ""
+      },
+      "5B": {
+        "instruction": "SRE",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 7,
+        "flags": "NZC"
+      },
+      "5C": {
+        "instruction": "NOP",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": ""
+      },
+      "5D": {
+        "instruction": "EOR",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "5E": {
+        "instruction": "LSR",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 7,
+        "flags": "NZC"
+      },
+      "5F": {
+        "instruction": "SRE",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 7,
+        "flags": "NZC"
+      },
+      "60": {
+        "instruction": "RTS",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 6,
+        "flags": ""
+      },
+      "61": {
+        "instruction": "ADC",
+        "addressing": "ind,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": "NZCV"
+      },
+      "62": {
+        "instruction": "JAM",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 0,
+        "flags": ""
+      },
+      "63": {
+        "instruction": "RRA",
+        "addressing": "ind,X",
+        "bytes": 2,
+        "cycles": 8,
+        "flags": "NZCV"
+      },
+      "64": {
+        "instruction": "NOP",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": ""
+      },
+      "65": {
+        "instruction": "ADC",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": "NZCV"
+      },
+      "66": {
+        "instruction": "ROR",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZC"
+      },
+      "67": {
+        "instruction": "RRA",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZCV"
+      },
+      "68": {
+        "instruction": "PLA",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "69": {
+        "instruction": "ADC",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": "NZCV"
+      },
+      "6A": {
+        "instruction": "ROR",
+        "addressing": "A",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "NZC"
+      },
+      "6B": {
+        "instruction": "ARR",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": "NZCV"
+      },
+      "6C": {
+        "instruction": "JMP",
+        "addressing": "ind",
+        "bytes": 3,
+        "cycles": 5,
+        "flags": ""
+      },
+      "6D": {
+        "instruction": "ADC",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZCV"
+      },
+      "6E": {
+        "instruction": "ROR",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 6,
+        "flags": "NZC"
+      },
+      "6F": {
+        "instruction": "RRA",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 6,
+        "flags": "NZCV"
+      },
+      "70": {
+        "instruction": "BVS",
+        "addressing": "rel",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": ""
+      },
+      "71": {
+        "instruction": "ADC",
+        "addressing": "ind,Y",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZCV"
+      },
+      "72": {
+        "instruction": "JAM",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 0,
+        "flags": ""
+      },
+      "73": {
+        "instruction": "RRA",
+        "addressing": "ind,Y",
+        "bytes": 2,
+        "cycles": 8,
+        "flags": "NZCV"
+      },
+      "74": {
+        "instruction": "NOP",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 4,
+        "flags": ""
+      },
+      "75": {
+        "instruction": "ADC",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 4,
+        "flags": "NZCV"
+      },
+      "76": {
+        "instruction": "ROR",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": "NZC"
+      },
+      "77": {
+        "instruction": "RRA",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": "NZCV"
+      },
+      "78": {
+        "instruction": "SEI",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "I"
+      },
+      "79": {
+        "instruction": "ADC",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZCV"
+      },
+      "7A": {
+        "instruction": "NOP",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": ""
+      },
+      "7B": {
+        "instruction": "RRA",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 7,
+        "flags": "NZCV"
+      },
+      "7C": {
+        "instruction": "NOP",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": ""
+      },
+      "7D": {
+        "instruction": "ADC",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZCV"
+      },
+      "7E": {
+        "instruction": "ROR",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 7,
+        "flags": "NZC"
+      },
+      "7F": {
+        "instruction": "RRA",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 7,
+        "flags": "NZCV"
+      },
+      "80": {
+        "instruction": "NOP",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": ""
+      },
+      "81": {
+        "instruction": "STA",
+        "addressing": "ind,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": ""
+      },
+      "82": {
+        "instruction": "NOP",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": ""
+      },
+      "83": {
+        "instruction": "SAX",
+        "addressing": "ind,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": ""
+      },
+      "84": {
+        "instruction": "STY",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": ""
+      },
+      "85": {
+        "instruction": "STA",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": ""
+      },
+      "86": {
+        "instruction": "STX",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": ""
+      },
+      "87": {
+        "instruction": "SAX",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": ""
+      },
+      "88": {
+        "instruction": "DEY",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "NZ"
+      },
+      "89": {
+        "instruction": "NOP",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": ""
+      },
+      "8A": {
+        "instruction": "TXA",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "NZ"
+      },
+      "8B": {
+        "instruction": "XAA",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": "NZ"
+      },
+      "8C": {
+        "instruction": "STY",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": ""
+      },
+      "8D": {
+        "instruction": "STA",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": ""
+      },
+      "8E": {
+        "instruction": "STX",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": ""
+      },
+      "8F": {
+        "instruction": "SAX",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": ""
+      },
+      "90": {
+        "instruction": "BCC",
+        "addressing": "rel",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": ""
+      },
+      "91": {
+        "instruction": "STA",
+        "addressing": "ind,Y",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": ""
+      },
+      "92": {
+        "instruction": "JAM",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 0,
+        "flags": ""
+      },
+      "93": {
+        "instruction": "SHA",
+        "addressing": "ind,Y",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": ""
+      },
+      "94": {
+        "instruction": "STY",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 4,
+        "flags": ""
+      },
+      "95": {
+        "instruction": "STA",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 4,
+        "flags": ""
+      },
+      "96": {
+        "instruction": "STX",
+        "addressing": "zpg,Y",
+        "bytes": 2,
+        "cycles": 4,
+        "flags": ""
+      },
+      "97": {
+        "instruction": "SAX",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": ""
+      },
+      "98": {
+        "instruction": "TYA",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "NZ"
+      },
+      "99": {
+        "instruction": "STA",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 5,
+        "flags": ""
+      },
+      "9A": {
+        "instruction": "TXS",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": ""
+      },
+      "9B": {
+        "instruction": "SHS",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 5,
+        "flags": ""
+      },
+      "9C": {
+        "instruction": "SHY",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 5,
+        "flags": ""
+      },
+      "9D": {
+        "instruction": "STA",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 5,
+        "flags": ""
+      },
+      "9E": {
+        "instruction": "SHX",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 5,
+        "flags": ""
+      },
+      "9F": {
+        "instruction": "SHA",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 5,
+        "flags": ""
+      },
+      "A0": {
+        "instruction": "LDY",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": "NZ"
+      },
+      "A1": {
+        "instruction": "LDA",
+        "addressing": "ind,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": "NZ"
+      },
+      "A2": {
+        "instruction": "LDX",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": "NZ"
+      },
+      "A3": {
+        "instruction": "LAX",
+        "addressing": "ind,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": "NZ"
+      },
+      "A4": {
+        "instruction": "LDY",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": "NZ"
+      },
+      "A5": {
+        "instruction": "LDA",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": "NZ"
+      },
+      "A6": {
+        "instruction": "LDX",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": "NZ"
+      },
+      "A7": {
+        "instruction": "LAX",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": "NZ"
+      },
+      "A8": {
+        "instruction": "TAY",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "NZ"
+      },
+      "A9": {
+        "instruction": "LDA",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": "NZ"
+      },
+      "AA": {
+        "instruction": "TAX",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "NZ"
+      },
+      "AB": {
+        "instruction": "LAX",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": "NZ"
+      },
+      "AC": {
+        "instruction": "LDY",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "AD": {
+        "instruction": "LDA",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "AE": {
+        "instruction": "LDX",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "AF": {
+        "instruction": "LAX",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "B0": {
+        "instruction": "BCS",
+        "addressing": "rel",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": ""
+      },
+      "B1": {
+        "instruction": "LDA",
+        "addressing": "ind,Y",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZ"
+      },
+      "B2": {
+        "instruction": "JAM",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 0,
+        "flags": ""
+      },
+      "B3": {
+        "instruction": "LAX",
+        "addressing": "ind,Y",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZ"
+      },
+      "B4": {
+        "instruction": "LDY",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "B5": {
+        "instruction": "LDA",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "B6": {
+        "instruction": "LDX",
+        "addressing": "zpg,Y",
+        "bytes": 2,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "B7": {
+        "instruction": "LAX",
+        "addressing": "zpg,Y",
+        "bytes": 2,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "B8": {
+        "instruction": "CLV",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "V"
+      },
+      "B9": {
+        "instruction": "LDA",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "BA": {
+        "instruction": "TSX",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "NZ"
+      },
+      "BB": {
+        "instruction": "LAS",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "BC": {
+        "instruction": "LDY",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "BD": {
+        "instruction": "LDA",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "BE": {
+        "instruction": "LDX",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "BF": {
+        "instruction": "LAX",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZ"
+      },
+      "C0": {
+        "instruction": "CPY",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": "NZC"
+      },
+      "C1": {
+        "instruction": "CMP",
+        "addressing": "ind,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": "NZC"
+      },
+      "C2": {
+        "instruction": "NOP",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": ""
+      },
+      "C3": {
+        "instruction": "DCP",
+        "addressing": "ind,X",
+        "bytes": 2,
+        "cycles": 8,
+        "flags": "NZC"
+      },
+      "C4": {
+        "instruction": "CPY",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": "NZC"
+      },
+      "C5": {
+        "instruction": "CMP",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": "NZC"
+      },
+      "C6": {
+        "instruction": "DEC",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZ"
+      },
+      "C7": {
+        "instruction": "DCP",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZC"
+      },
+      "C8": {
+        "instruction": "INY",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "NZ"
+      },
+      "C9": {
+        "instruction": "CMP",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": "NZC"
+      },
+      "CA": {
+        "instruction": "DEX",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "NZ"
+      },
+      "CB": {
+        "instruction": "AXS",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": "NZC"
+      },
+      "CC": {
+        "instruction": "CPY",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZC"
+      },
+      "CD": {
+        "instruction": "CMP",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZC"
+      },
+      "CE": {
+        "instruction": "DEC",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 6,
+        "flags": "NZ"
+      },
+      "CF": {
+        "instruction": "DCP",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 6,
+        "flags": "NZC"
+      },
+      "D0": {
+        "instruction": "BNE",
+        "addressing": "rel",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": ""
+      },
+      "D1": {
+        "instruction": "CMP",
+        "addressing": "ind,Y",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZC"
+      },
+      "D2": {
+        "instruction": "JAM",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 0,
+        "flags": ""
+      },
+      "D3": {
+        "instruction": "DCP",
+        "addressing": "ind,Y",
+        "bytes": 2,
+        "cycles": 8,
+        "flags": "NZC"
+      },
+      "D4": {
+        "instruction": "NOP",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 4,
+        "flags": ""
+      },
+      "D5": {
+        "instruction": "CMP",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 4,
+        "flags": "NZC"
+      },
+      "D6": {
+        "instruction": "DEC",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": "NZ"
+      },
+      "D7": {
+        "instruction": "DCP",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": "NZC"
+      },
+      "D8": {
+        "instruction": "CLD",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "D"
+      },
+      "D9": {
+        "instruction": "CMP",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZC"
+      },
+      "DA": {
+        "instruction": "NOP",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": ""
+      },
+      "DB": {
+        "instruction": "DCP",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 7,
+        "flags": "NZC"
+      },
+      "DC": {
+        "instruction": "NOP",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": ""
+      },
+      "DD": {
+        "instruction": "CMP",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZC"
+      },
+      "DE": {
+        "instruction": "DEC",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 7,
+        "flags": "NZ"
+      },
+      "DF": {
+        "instruction": "DCP",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 7,
+        "flags": "NZC"
+      },
+      "E0": {
+        "instruction": "CPX",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": "NZC"
+      },
+      "E1": {
+        "instruction": "SBC",
+        "addressing": "ind,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": "NZCV"
+      },
+      "E2": {
+        "instruction": "NOP",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": ""
+      },
+      "E3": {
+        "instruction": "ISC",
+        "addressing": "ind,X",
+        "bytes": 2,
+        "cycles": 8,
+        "flags": "NZCV"
+      },
+      "E4": {
+        "instruction": "CPX",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": "NZC"
+      },
+      "E5": {
+        "instruction": "SBC",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 3,
+        "flags": "NZCV"
+      },
+      "E6": {
+        "instruction": "INC",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZ"
+      },
+      "E7": {
+        "instruction": "ISC",
+        "addressing": "zpg",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZCV"
+      },
+      "E8": {
+        "instruction": "INX",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "NZ"
+      },
+      "E9": {
+        "instruction": "SBC",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": "NZCV"
+      },
+      "EA": {
+        "instruction": "NOP",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": ""
+      },
+      "EB": {
+        "instruction": "SBC",
+        "addressing": "#",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": "NZCV"
+      },
+      "EC": {
+        "instruction": "CPX",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZC"
+      },
+      "ED": {
+        "instruction": "SBC",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZCV"
+      },
+      "EE": {
+        "instruction": "INC",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 6,
+        "flags": "NZ"
+      },
+      "EF": {
+        "instruction": "ISC",
+        "addressing": "abs",
+        "bytes": 3,
+        "cycles": 6,
+        "flags": "NZCV"
+      },
+      "F0": {
+        "instruction": "BEQ",
+        "addressing": "rel",
+        "bytes": 2,
+        "cycles": 2,
+        "flags": ""
+      },
+      "F1": {
+        "instruction": "SBC",
+        "addressing": "ind,Y",
+        "bytes": 2,
+        "cycles": 5,
+        "flags": "NZCV"
+      },
+      "F2": {
+        "instruction": "JAM",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 0,
+        "flags": ""
+      },
+      "F3": {
+        "instruction": "ISC",
+        "addressing": "ind,Y",
+        "bytes": 2,
+        "cycles": 8,
+        "flags": "NZCV"
+      },
+      "F4": {
+        "instruction": "NOP",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 4,
+        "flags": ""
+      },
+      "F5": {
+        "instruction": "SBC",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 4,
+        "flags": "NZCV"
+      },
+      "F6": {
+        "instruction": "INC",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": "NZ"
+      },
+      "F7": {
+        "instruction": "ISC",
+        "addressing": "zpg,X",
+        "bytes": 2,
+        "cycles": 6,
+        "flags": "NZCV"
+      },
+      "F8": {
+        "instruction": "SED",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": "D"
+      },
+      "F9": {
+        "instruction": "SBC",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZCV"
+      },
+      "FA": {
+        "instruction": "NOP",
+        "addressing": "imp",
+        "bytes": 1,
+        "cycles": 2,
+        "flags": ""
+      },
+      "FB": {
+        "instruction": "ISC",
+        "addressing": "abs,Y",
+        "bytes": 3,
+        "cycles": 7,
+        "flags": "NZCV"
+      },
+      "FC": {
+        "instruction": "NOP",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": ""
+      },
+      "FD": {
+        "instruction": "SBC",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 4,
+        "flags": "NZCV"
+      },
+      "FE": {
+        "instruction": "INC",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 7,
+        "flags": "NZ"
+      },
+      "FF": {
+        "instruction": "ISC",
+        "addressing": "abs,X",
+        "bytes": 3,
+        "cycles": 7,
+        "flags": "NZCV"
+      }
+}
+  
