@@ -1,4 +1,4 @@
-# __init__.py
+# _disassembler.py
 
 # Copyright [2023] Manjunath Srinivasa
 
@@ -14,4 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from _instruction import instruction
+class disassembler:
+    def __init__(self):
+        pass

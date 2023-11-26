@@ -13,6 +13,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
 import warnings
 
 def addressing(mode, registers, bus):
@@ -22,6 +23,7 @@ def addressing(mode, registers, bus):
 
     if mode == "A":
         data = registers["AC"].get()
+        memAddr = "AC"
         pc += 1
     elif mode == "abs":
         LL = bus.get(pc)

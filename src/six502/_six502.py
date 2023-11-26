@@ -1,4 +1,4 @@
-# __init__.py
+# _six502.py
 
 # Copyright [2023] Manjunath Srinivasa
 
@@ -14,4 +14,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from _instruction import instruction
+from component import clock, register
+from instruction import instruction
+
+class six502:
+    def __init__(self, bus):
+        self._clk = clock()
+        self._registers = {
+            "PC": register(16),
+            "AC": register(),
+            "X": register(),
+            "SR": register(),
+            "SP": register()
+        }
+        self._bus = bus
+        
+    def step(self):
+        pass
