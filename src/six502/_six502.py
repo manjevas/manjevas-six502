@@ -16,6 +16,7 @@
 
 from component import clock, register
 from instruction import instruction
+from debug import tools
 
 class six502:
     def __init__(self, bus):

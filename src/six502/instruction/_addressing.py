@@ -16,15 +16,21 @@
 
 import warnings
 
-def addressing(mode, registers, bus):
+def addressing(mode, registers, bus, debugTools):
     memAddr = -0x01
     data    = -0x01
-    pc      = registers["PC"]
+    pc      = registers["PC"].get()
+    
+    # Debug output at start
+    debugTools.print(f"Data at start of {mode} addressing", 2)
+    debugTools.print(f"PC = {pc}", 2)
+    debugTools.print(f"Memory Address = {memAddr}", 2)
+    debugTools.print(f"Data = {data}", 2)
+    debugTools.print(f"", 2)
 
     if mode == "A":
         data = registers["AC"].get()
-        memAddr = "AC"
-        pc += 1
+        memAddr = "AC"        
     elif mode == "abs":
         LL = bus.get(pc)
         pc += 1
@@ -110,4 +116,13 @@ def addressing(mode, registers, bus):
     else:
         warnings.warn(f"Invalid address mode acronym: {mode}", UserWarning)
 
+    registers["PC"].set(pc)
+    
+    # Debug output at end
+    debugTools.print(f"Data at end of addressing", 2)
+    debugTools.print(f"PC = {pc}", 2)
+    debugTools.print(f"Memory Address = {memAddr}", 2)
+    debugTools.print(f"Data = {data}", 2)
+    debugTools.print(f"----------", 2)
+    
     return data, memAddr

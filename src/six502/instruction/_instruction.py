@@ -98,38 +98,62 @@
 #     NOP
 #     JAM
 
-import json
-from _status import set_status
-from _addressing import addressing
+import os, json
+from ._status import set_status
+from ._addressing import addressing
 
 class instruction:
-    def __init__(self, registers, bus, clock):
-        with open('opcodes.json') as f:
+    def __init__(self, registers, bus, clock, debugTools):
+        with open(f'{os.path.dirname(os.path.abspath(__file__))}/opcodes.json') as f:
             self._opCodesDict = json.load(f)
 
         self._bus = bus
         self._registers = registers
         self._clock = clock
+        self._dbg = debugTools
+        
+        self._op = dict()
         self._setupOps()
 
     def run(self, opCode): 
+        # Debug at start
+        self._dbg.print(f"Registers at start of instruction:", 1)
+        self._dbg.print(f"A = 0x{self._registers['AC'].get():02x}", 1)
+        self._dbg.print(f"X = 0x{self._registers['X'].get():02x}", 1)        
+        self._dbg.print(f"Y = 0x{self._registers['Y'].get():02x}", 1)
+        self._dbg.print(f"SP = 0x{self._registers['SP'].get():02x}", 1)
+        self._dbg.print(f"SR = 0x{self._registers['SR'].get():08b}", 1)
+        self._dbg.print(f"PC = 0x{self._registers['PC'].get():04x}", 1)
+        self._dbg.print(f"", 1)
+        
         pc = self._registers["PC"].get()
         pc += 1
         self._registers["PC"].set(pc)
             
         try:
-            self._opCodeDict = self._opCodesDict[opCode]
+            self._opCodeDict = self._opCodesDict[hex(opCode)[2:]]
         except:
             raise Exception(f"{hex(opCode)} is an invalid opcode.")
         
         # Addressing mode
-        self._data, self._memAddr = addressing(self._opCodeDict[addressing], self._registers, self._bus)
+        self._data, self._memAddr = addressing(self._opCodeDict["addressing"], self._registers, self._bus, self._dbg)
 
         # Run operation
-        self._op[self._opCodeDict["instruction"]]
+        self._dbg.print(f"Instruction = {self._opCodeDict['instruction']}", 1)
+        self._op[self._opCodeDict["instruction"]]()
         
         # Update clock
         self._clock.tick(self._opCodeDict["cycles"])
+        
+        # Debug at end
+        self._dbg.print(f"Registers at end of instruction:", 1)
+        self._dbg.print(f"A = 0x{self._registers['AC'].get():02x}", 1)
+        self._dbg.print(f"X = 0x{self._registers['X'].get():02x}", 1)        
+        self._dbg.print(f"Y = 0x{self._registers['Y'].get():02x}", 1)
+        self._dbg.print(f"SP = 0x{self._registers['SP'].get():02x}", 1)
+        self._dbg.print(f"SR = 0x{self._registers['SR'].get():08b}", 1)
+        self._dbg.print(f"PC = 0x{self._registers['PC'].get():04x}", 1)
+        self._dbg.print(f"----------", 1)
 
     def _setupOps(self):
         # Legal instructions

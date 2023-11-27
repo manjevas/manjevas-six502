@@ -23,7 +23,7 @@ def set_status(register, bits, result, *argv):
             
     def set_V():
         if len(argv) < 3:
-            pass
+            return
         a = argv[0]
         b = argv[1]
         
@@ -70,9 +70,10 @@ def set_status(register, bits, result, *argv):
         "Z": lambda: set_Z(),
         "C": lambda: set_C()
     }
+    
     if bits == "":
         pass
     else:
         for bit in bits:
-            bit_rubrick[bit]
+            bit_rubrick[bit]()
                 
